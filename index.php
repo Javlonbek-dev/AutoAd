@@ -14,12 +14,12 @@
                 <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
                 <h1 class="opacity">LOGIN</h1>
                 <form action="php/login.php" method="post">
-                    <input name="username" type="text" placeholder="USERNAME" />
+                    <input name="email" type="email" placeholder="Email" />
                     <input name="password" type="password" placeholder="PASSWORD" />
                     <button type="submit" class="opacity">SUBMIT</button>
                 </form>
                 <div class="register-forget opacity">
-                    <a href="php/register.php">REGISTER</a>
+                    <a href="./html/register.html">REGISTER</a>
                     <a href="">FORGOT PASSWORD</a>
                 </div>
             </div>

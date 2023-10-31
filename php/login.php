@@ -2,7 +2,7 @@
 session_start();
 include 'db_con.php';
 
-if (isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['email']) && isset($_POST['password'])) {
   function validation($data)
   {
     $data = trim($data);
@@ -12,20 +12,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   }
 }
 
-$uname = validation($_POST['username']);
+$email = validation($_POST['email']);
 $pass = validation($_POST['password']);
 
-$sql = "SELECT * FROM login WHERE username = '$uname' AND password='$pass'";
+$sql = "SELECT * FROM login WHERE email = '$email' AND password='$pass'";
 $result = $con->query($sql);
 
 if (mysqli_num_rows($result) === 1) {
   $row = mysqli_fetch_assoc($result);
-  if ($row['username'] === $uname && $row['password'] === $pass) {
+  if ($row['email'] === $email && $row['password'] === $pass) {
     echo "Logged In";
+    $_SESSION['email'] = $row['email'];
     $_SESSION['username'] = $row['username'];
-    $_SESSION['name'] = $row['name'];
     $_SESSION['id'] = $row['id'];
-    header("Location: home.php");
+    header("Location: ../html/header.html");
     exit();
   } 
   else{
