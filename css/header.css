@@ -232,6 +232,7 @@ nav li a.active::after {
   .contact_links,
   .social_links,
   .header_cta {
+    position: relative;
     display: none !important;
   }
 }
@@ -248,8 +249,7 @@ nav li a.active::after {
   background-color: var(--primary_color);
   border: 2px solid var(--primary_color);
   color: #fff;
-  padding: 8px 40px;
-  text-align: center;
+  padding: 8px 15px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
@@ -258,6 +258,23 @@ nav li a.active::after {
 .btn_one:hover {
   background-color: #fff;
   color: var(--primary_color);
+}
+.btn_two{
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 1px solid #aaa;
+  background-color: #243c72;
+  color: aqua;
+  border-radius: 8px;
+  transition: .5s all ease;
+}
+.btn_two:hover{
+   background-color: #fff;
+   color: var(--primary_color);
+
 }
 /* button end */
 
@@ -300,4 +317,5 @@ nav li a.active::after {
     top: 0;
   }
 }
+
 /* dropdown end */
