@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
     $result = $con->query($sql);
 
     if ($result) {
-        header("Location: ../html/header.html?msg=New record created successfully");
+        header("Location: ../html/header.html");
     } else {
         echo "Failed: " . mysqli_error($conn);
     }
