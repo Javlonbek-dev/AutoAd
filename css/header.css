@@ -327,8 +327,12 @@ header.collapsing-parallax + .site-main{
 .site-main .inner{
 	text-align: center;
 }
+.inner{
+  padding: 0 auto;
+}
 .row{
-    
+    padding-top: 100px;
+    text-align: center;
 }
 .row::after, .row::before {
     content: '';
@@ -341,20 +345,28 @@ header.collapsing-parallax + .site-main{
 	text-align: left;
 	position: relative;
 	width:28%;
-	max-height: 350px;
-	margin: 0 15px 20px 15px;
-	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.18),
-		0px 4px 14px 0px rgba(0, 0, 0, 0.15);
+	max-height: 400px;
+	margin: 0 10px 15px 15px;
+  transition: box-shadow .3s ease-in-out;
+  border: #031656 solid 1px;
+  overflow: hidden;
+}
+.cardview:hover{
+  box-shadow: 0px 5px 10px 0px  rgba(17, 17, 208, 0.2); 
 }
 	.cardview img{
 		display: block;
 		position: relative;
 		background-position: center center;
 		background-size: cover;
-		height: 180px;
+		height: 200px;
 		width: 100%;
 		top: 0;
+    transition: transform 0.3s ease;
 	}
+  .cardview:hover img{
+    transform: scale(1.1);
+  }
 .cardview .content{
 	position: relative;
 	padding: 15px 20px;
@@ -362,11 +374,11 @@ header.collapsing-parallax + .site-main{
 .cardview h1{
 	font-size: 19px;
 	font-weight: 500;
-	margin: 0 0 12px 0;
+	margin: 0 0 8px 0;
 }
 .cardview p{
 	font-size: 14px;
-	margin: 0 15px 15px 0;
+	margin: 0 10px 10px 0;
 }
 .cardview a{
 	font-size: 14px;
