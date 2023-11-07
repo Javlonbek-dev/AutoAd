@@ -366,6 +366,7 @@ header.collapsing-parallax + .site-main{
 	}
   .cardview:hover img{
     transform: scale(1.1);
+    /* transform: translateY(-10px); */
   }
 .cardview .content{
 	position: relative;
