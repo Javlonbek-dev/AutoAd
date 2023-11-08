@@ -336,7 +336,7 @@ header.collapsing-parallax + .site-main{
   padding: 0 auto;
 }
 .row{
-    padding-top: 100px;
+    padding-top: 20px;
     text-align: center;
 }
 .row::after, .row::before {
@@ -351,10 +351,11 @@ header.collapsing-parallax + .site-main{
 	position: relative;
 	width:28%;
 	max-height: 400px;
-	margin: 0 10px 15px 15px;
+	margin: 0 10px 10px 10px;
   transition: box-shadow .3s ease-in-out;
   border: #031656 solid 1px;
   overflow: hidden;
+  border-radius: 15px;
 }
 .cardview:hover{
   box-shadow: 0px 5px 10px 0px  rgba(17, 17, 208, 0.2); 
