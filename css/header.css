@@ -73,10 +73,12 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: -85px;
+  
 }
 header .container {
   max-width: calc(var(--container_width) + 80px);
   padding: 18px 15px;
+  background-attachment: fixed;
 }
 .header_flex {
   display: flex;
@@ -129,7 +131,8 @@ header .container {
 }
 
 nav .container {
-  padding: 0 15px;
+  padding: 10px 15px;
+  z-index: 3;
 }
 nav ul {
   padding: 0;
@@ -159,6 +162,8 @@ nav li a.active::after {
   height: 4px;
   width: 100%;
   background-color: var(--yellow);
+  z-index: 3;
+
 }
 
 .burger {
@@ -357,12 +362,13 @@ header.collapsing-parallax + .site-main{
 	.cardview img{
 		display: block;
 		position: relative;
-		background-position: center center;
+		background-position: center;
 		background-size: cover;
 		height: 200px;
 		width: 100%;
 		top: 0;
     transition: transform 0.3s ease;
+    z-index: -655;
 	}
   .cardview:hover img{
     transform: scale(1.1);
