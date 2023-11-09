@@ -80,6 +80,22 @@ header .container {
   padding: 18px 15px;
   background-attachment: fixed;
 }
+.container_one{
+  position: relative;
+}
+.select{
+  position: absolute;
+  right: 0;
+}
+select{
+  background-color:#031656 ;
+  padding: 6px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  border-radius: 3px;
+  border: 2px solid #fff;
+}
+
 .header_flex {
   display: flex;
   align-items: center;
