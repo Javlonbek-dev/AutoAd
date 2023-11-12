@@ -73,11 +73,29 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: -85px;
+  
 }
 header .container {
   max-width: calc(var(--container_width) + 80px);
   padding: 18px 15px;
+  background-attachment: fixed;
 }
+.container_one{
+  position: relative;
+}
+.select{
+  position: absolute;
+  right: 0;
+}
+select{
+  background-color:#031656 ;
+  padding: 6px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  border-radius: 3px;
+  border: 2px solid #fff;
+}
+
 .header_flex {
   display: flex;
   align-items: center;
@@ -129,7 +147,8 @@ header .container {
 }
 
 nav .container {
-  padding: 0 15px;
+  padding: 10px 15px;
+  z-index: 3;
 }
 nav ul {
   padding: 0;
@@ -159,6 +178,8 @@ nav li a.active::after {
   height: 4px;
   width: 100%;
   background-color: var(--yellow);
+  z-index: 3;
+
 }
 
 .burger {
@@ -331,7 +352,7 @@ header.collapsing-parallax + .site-main{
   padding: 0 auto;
 }
 .row{
-    padding-top: 100px;
+    padding-top: 20px;
     text-align: center;
 }
 .row::after, .row::before {
@@ -346,10 +367,11 @@ header.collapsing-parallax + .site-main{
 	position: relative;
 	width:28%;
 	max-height: 400px;
-	margin: 0 10px 15px 15px;
+	margin: 0 10px 10px 10px;
   transition: box-shadow .3s ease-in-out;
   border: #031656 solid 1px;
   overflow: hidden;
+  border-radius: 15px;
 }
 .cardview:hover{
   box-shadow: 0px 5px 10px 0px  rgba(17, 17, 208, 0.2); 
@@ -357,12 +379,13 @@ header.collapsing-parallax + .site-main{
 	.cardview img{
 		display: block;
 		position: relative;
-		background-position: center center;
+		background-position: center;
 		background-size: cover;
 		height: 200px;
 		width: 100%;
 		top: 0;
     transition: transform 0.3s ease;
+    z-index: -655;
 	}
   .cardview:hover img{
     transform: scale(1.1);
